@@ -1,20 +1,43 @@
 package com.du.de.happybirthday
 
-fun main() {
-    var myFirstDice = DiceActivity()
-    val diceRoll = myFirstDice.roll()
-    println("Your ${myFirstDice.sides} sided dice rolled ${diceRoll}")
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-    myFirstDice.sides = 20
-    println("Your ${myFirstDice.sides} sided dice rolled ${myFirstDice.roll()}")
+/**
+ * This activity allows the user to roll a dice and view the result
+ * on the screen.
+ */
+class DiceActivity : AppCompatActivity() {
 
+    private val toast = Toast.makeText(this, "Diced Rolled!", Toast.LENGTH_SHORT)
+    private val tvMessage: TextView = findViewById(R.id.tvMessage)
+    private val rollButton: Button = findViewById(R.id.btnRoll)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_dice)
+
+        rollButton.setOnClickListener { rollDice() }
+    }
+
+    /**
+     * Roll the dice and update the screen with the result.
+     */
+    private fun rollDice() {
+        // Create new Dice object with 6 sides and roll it
+        val dice = Dice(6)
+        val diceRoll = dice.roll()
+
+        // Update the screen with the dice roll
+        tvMessage.text = diceRoll.toString()
+    }
 }
 
-class DiceActivity {
-    var sides = 6
-
-    fun roll() : Int{
-        val randomNumber = (1..sides).random()
-        return randomNumber
+class Dice(val numSides: Int) {
+    fun roll(): Int {
+        return (1..numSides).random()
     }
 }
