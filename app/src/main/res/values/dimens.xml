@@ -4,4 +4,5 @@
     <dimen name="btn_text_size">36sp</dimen>
     <dimen name="dice_height">200dp</dimen>
     <dimen name="dice_width">160dp</dimen>
+    <dimen name="image_elevation">15dp</dimen>
 </resources>

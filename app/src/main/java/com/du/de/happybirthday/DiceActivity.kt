@@ -18,12 +18,10 @@ class DiceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dice)
 
-        val rollButton: Button = findViewById(R.id.btnRoll)
-
         // Find the ImageView in the layout
         diceImage = findViewById(R.id.ivDice)
 
-        rollButton.setOnClickListener {
+        diceImage.setOnClickListener {
             rollDice()
         }
 
