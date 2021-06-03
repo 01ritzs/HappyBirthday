@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Happy Birthday</string>
+    <string name="app_name">Dice Roll</string>
     <string name="todo">TODO</string>
     <string name="from_google_developers">From Google Developers</string>
     <string name="happy_birthday_ritesh">Happy Birthday, Ritesh</string>
     <string name="roll">Roll</string>
     <string name="_0">0</string>
+    <string name="content_description_for_image">ImageView of dice to show the number</string>
 </resources>

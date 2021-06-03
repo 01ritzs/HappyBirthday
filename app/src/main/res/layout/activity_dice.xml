@@ -8,6 +8,7 @@
         android:id="@+id/ivDice"
         android:layout_width="@dimen/dice_width"
         android:layout_height="@dimen/dice_height"
+        android:contentDescription="@string/content_description_for_image"
         android:elevation="@dimen/image_elevation"
         android:outlineAmbientShadowColor="@color/cardview_dark_background"
         android:src="@drawable/dice_1"
